@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Built plugin packages (attached to GitHub releases instead)
+*.zip
+
+# Local tool settings
+.claude/

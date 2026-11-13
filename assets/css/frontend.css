@@ -1,0 +1,255 @@
+/* -----------------------------------------------
+   WP Photo Booking — Frontend Styles
+   Shared by booking forms, contact forms and the
+   questionnaire. Visual styling (fonts, colors,
+   borders) is left to the active theme. Only layout
+   and structure rules are defined here.
+----------------------------------------------- */
+
+/* Notices */
+.wppb-form-wrap .wppb-notice {
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    display: block;
+}
+.wppb-form-wrap .wppb-notice-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.wppb-form-wrap .wppb-notice-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Field grid: full-width rows, optional half-width pairs */
+.wppb-form-wrap .wppb-fields {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 12px;
+}
+.wppb-form-wrap .wppb-field {
+    flex: 0 0 100%;
+    min-width: 0;
+    margin-bottom: var(--wppb-field-gap, 18px);
+    box-sizing: border-box;
+}
+.wppb-form-wrap .wppb-field.wppb-half {
+    flex-basis: calc(50% - 6px);
+}
+
+/* Section heading */
+.wppb-form-wrap .wppb-field-heading {
+    margin-bottom: 8px;
+}
+.wppb-form-wrap .wppb-heading {
+    margin: 8px 0 0;
+}
+
+/* Force label above its input (layout, not visual) */
+.wppb-form-wrap .wppb-field label,
+.wppb-form-wrap .wppb-field .wppb-field-label {
+    display: block;
+    float: none;
+    width: auto;
+    text-align: left;
+}
+
+/* Required asterisk */
+.wppb-form-wrap .wppb-req {
+    color: #c0392b;
+}
+
+/* Inputs fill the available width */
+.wppb-form-wrap .wppb-field input[type="text"],
+.wppb-form-wrap .wppb-field input[type="email"],
+.wppb-form-wrap .wppb-field input[type="tel"],
+.wppb-form-wrap .wppb-field input[type="number"],
+.wppb-form-wrap .wppb-field input[type="time"],
+.wppb-form-wrap .wppb-field select,
+.wppb-form-wrap .wppb-field textarea {
+    display: block;
+    float: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Field height chosen in the form editor. Vertical padding is dropped so the
+   text stays centred whatever the theme's padding is. */
+.wppb-form-wrap.wppb-has-field-height .wppb-field input[type="text"],
+.wppb-form-wrap.wppb-has-field-height .wppb-field input[type="email"],
+.wppb-form-wrap.wppb-has-field-height .wppb-field input[type="time"],
+.wppb-form-wrap.wppb-has-field-height .wppb-field select {
+    height: var(--wppb-field-height) !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.wppb-form-wrap .wppb-field input[readonly] {
+    cursor: pointer;
+}
+
+.wppb-form-wrap .wppb-field textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Radio / checkbox / consent: input and text on the same row */
+.wppb-form-wrap .wppb-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.wppb-form-wrap .wppb-option-label {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 8px;
+    float: none !important;
+    width: auto !important;
+    text-align: left !important;
+    margin-bottom: 0 !important;
+}
+.wppb-form-wrap .wppb-option-label input[type="radio"],
+.wppb-form-wrap .wppb-option-label input[type="checkbox"] {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 0.25em 0 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0;
+}
+
+/* reCAPTCHA spacing */
+.wppb-form-wrap .wppb-recaptcha-field {
+    margin-bottom: 20px;
+}
+
+/* Submit row */
+.wppb-form-wrap .wppb-submit-row {
+    margin-top: 10px;
+}
+.wppb-form-wrap.wppb-btn-align-center .wppb-submit-row { text-align: center; }
+.wppb-form-wrap.wppb-btn-align-right  .wppb-submit-row { text-align: right; }
+
+/* Submit button (styles "outline" and "filled"; "theme" is left untouched).
+   Without a chosen colour it follows the page's text colour. */
+.wppb-form-wrap.wppb-btn-outline .wppb-submit-btn,
+.wppb-form-wrap.wppb-btn-filled .wppb-submit-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 160px;
+    min-height: var(--wppb-field-height, 46px);
+    margin: 0;
+    padding: 0.7em 2.4em;
+    border: 1px solid var(--wppb-btn-color, currentColor);
+    border-radius: var(--wppb-input-radius, 0);
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    color: var(--wppb-btn-color, inherit);
+    font: inherit;
+    font-size: 0.95em;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+}
+/* With a chosen field height the button is exactly as tall as the fields */
+.wppb-form-wrap.wppb-has-field-height.wppb-btn-outline .wppb-submit-btn,
+.wppb-form-wrap.wppb-has-field-height.wppb-btn-filled .wppb-submit-btn {
+    height: var(--wppb-field-height);
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.wppb-form-wrap.wppb-btn-full .wppb-submit-btn {
+    display: block;
+    width: 100%;
+}
+
+/* Outline: frame only, fills on hover and keyboard focus */
+.wppb-form-wrap.wppb-btn-outline .wppb-submit-btn:hover,
+.wppb-form-wrap.wppb-btn-outline .wppb-submit-btn:focus-visible {
+    background: var(--wppb-btn-color, #222);
+    border-color: var(--wppb-btn-color, #222);
+    color: var(--wppb-btn-contrast, #fff);
+}
+
+/* Filled: solid, eases off on hover */
+.wppb-form-wrap.wppb-btn-filled .wppb-submit-btn {
+    background: var(--wppb-btn-color, #222);
+    border-color: var(--wppb-btn-color, #222);
+    color: var(--wppb-btn-contrast, #fff);
+}
+.wppb-form-wrap.wppb-btn-filled .wppb-submit-btn:hover,
+.wppb-form-wrap.wppb-btn-filled .wppb-submit-btn:focus-visible {
+    opacity: 0.85;
+}
+
+.wppb-form-wrap .wppb-submit-btn:focus-visible {
+    outline: 2px solid var(--wppb-btn-color, currentColor);
+    outline-offset: 2px;
+}
+.wppb-form-wrap .wppb-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* Time slot picker */
+.wppb-slot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+}
+.wppb-slot-btn {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: #222;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: border-color 0.15s, background 0.15s;
+}
+.wppb-slot-btn:hover {
+    border-color: #888;
+    background: #f5f5f5;
+}
+.wppb-slot-btn.wppb-slot-active {
+    border-color: #0073aa;
+    background: #0073aa;
+    color: #fff;
+}
+.wppb-slot-hint {
+    color: #888;
+    font-size: 13px;
+    margin: 4px 0 0;
+}
+.wppb-slot-none {
+    color: #c0392b;
+}
+
+/* Calendar — booked-date highlight */
+.ui-datepicker td.wppb-taken a,
+.ui-datepicker td.wppb-taken span {
+    background: #fce4e4 !important;
+    color: #c00 !important;
+    text-decoration: line-through;
+}
+
+/* Small screens: half-width fields stack */
+@media (max-width: 480px) {
+    .wppb-form-wrap .wppb-field.wppb-half {
+        flex-basis: 100%;
+    }
+}

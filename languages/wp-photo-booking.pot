@@ -1,0 +1,231 @@
+# Copyright (C) 2026 Ulla Wolk
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Photo Booking 1.10.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-photo-booking\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-13T12:18:31+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: wp-photo-booking\n"
+
+#. Plugin Name of the plugin
+#: wp-photo-booking.php
+msgid "WP Photo Booking"
+msgstr ""
+
+#. Description of the plugin
+#: wp-photo-booking.php
+msgid "Configurable booking and contact forms for photographers, with calendar, status management, and email notifications."
+msgstr ""
+
+#. Author of the plugin
+#: wp-photo-booking.php
+msgid "Ulla Wolk"
+msgstr ""
+
+#: includes/class-email.php:31
+msgid "We have received your message — {site_name}"
+msgstr ""
+
+#: includes/class-email.php:32
+msgid ""
+"Hi {first_name},\n"
+"\n"
+"Thank you for your message. We will get back to you as soon as possible.\n"
+"\n"
+"{site_name}"
+msgstr ""
+
+#: includes/class-form-handler.php:37
+msgid "Too many submissions. Please try again later."
+msgstr ""
+
+#: includes/class-form-handler.php:59
+#: includes/class-form-renderer.php:35
+#: includes/class-form-renderer.php:41
+msgid "Form not found."
+msgstr ""
+
+#: includes/class-form-handler.php:65
+msgid "Thank you! Your booking request has been received. We will contact you to confirm shortly."
+msgstr ""
+
+#: includes/class-form-handler.php:66
+msgid "Thank you! Your message has been sent."
+msgstr ""
+
+#: includes/class-form-handler.php:90
+msgid "Please select a date."
+msgstr ""
+
+#: includes/class-form-handler.php:93
+msgid "Please select a time slot."
+msgstr ""
+
+#: includes/class-form-handler.php:95
+msgid "Invalid time slot selected."
+msgstr ""
+
+#: includes/class-form-handler.php:102
+msgid "The booking system is busy. Please try again."
+msgstr ""
+
+#: includes/class-form-handler.php:106
+msgid "This date/time is not available. Please choose another."
+msgstr ""
+
+#: includes/class-form-handler.php:113
+msgid "Could not save your submission. Please try again."
+msgstr ""
+
+#: includes/class-form-handler.php:125
+#: includes/class-form-renderer.php:75
+msgid "Please complete the reCAPTCHA verification."
+msgstr ""
+
+#: includes/class-form-handler.php:134
+msgid "Could not verify reCAPTCHA. Please try again."
+msgstr ""
+
+#: includes/class-form-handler.php:138
+msgid "reCAPTCHA verification failed. Please try again."
+msgstr ""
+
+#: includes/class-form-handler.php:150
+msgid "Invalid date format."
+msgstr ""
+
+#: includes/class-form-handler.php:170
+msgid "Invalid questionnaire link."
+msgstr ""
+
+#: includes/class-form-handler.php:173
+msgid "Questionnaire not found."
+msgstr ""
+
+#: includes/class-form-handler.php:175
+msgid "This questionnaire has already been submitted."
+msgstr ""
+
+#: includes/class-form-handler.php:180
+#: includes/class-form-handler.php:201
+msgid "Thank you! Your questionnaire has been submitted."
+msgstr ""
+
+#: includes/class-form-handler.php:184
+msgid "Questionnaire is not configured."
+msgstr ""
+
+#. translators: %s: field label
+#: includes/class-form-renderer.php:74
+#: includes/class-form-renderer.php:347
+#, php-format
+msgid "%s is required."
+msgstr ""
+
+#: includes/class-form-renderer.php:76
+msgid "Loading available times..."
+msgstr ""
+
+#: includes/class-form-renderer.php:77
+msgid "No time slots available for this date."
+msgstr ""
+
+#: includes/class-form-renderer.php:78
+msgid "Network error. Please check your connection and try again."
+msgstr ""
+
+#: includes/class-form-renderer.php:79
+msgid "An error occurred. Please try again."
+msgstr ""
+
+#: includes/class-form-renderer.php:80
+msgid "Sending…"
+msgstr ""
+
+#: includes/class-form-renderer.php:117
+msgid "Submit"
+msgstr ""
+
+#: includes/class-form-renderer.php:117
+msgid "Send"
+msgstr ""
+
+#: includes/class-form-renderer.php:151
+msgid "Submit Questionnaire"
+msgstr ""
+
+#: includes/class-form-renderer.php:175
+msgid "Leave empty"
+msgstr ""
+
+#: includes/class-form-renderer.php:247
+msgid "Select…"
+msgstr ""
+
+#: includes/class-form-renderer.php:276
+msgid "Select a date first to see available times."
+msgstr ""
+
+#: includes/class-form-renderer.php:335
+msgid "Yes"
+msgstr ""
+
+#. translators: 1: field label, 2: maximum number of characters
+#: includes/class-form-renderer.php:353
+#, php-format
+msgid "%1$s is too long (maximum %2$d characters)."
+msgstr ""
+
+#. translators: %s: field label
+#: includes/class-form-renderer.php:371
+#, php-format
+msgid "Please enter a valid value for \"%s\"."
+msgstr ""
+
+#: includes/class-forms.php:325
+msgid "Time"
+msgstr ""
+
+#: includes/class-questionnaire-frontend.php:27
+msgid "Questionnaire Not Found"
+msgstr ""
+
+#: includes/class-questionnaire-frontend.php:28
+msgid "This questionnaire link is invalid or has expired."
+msgstr ""
+
+#: includes/class-questionnaire-frontend.php:30
+msgid "Questionnaire Already Submitted"
+msgstr ""
+
+#: includes/class-questionnaire-frontend.php:31
+msgid "Thank you! You have already submitted your questionnaire for this session."
+msgstr ""
+
+#: includes/class-questionnaire-frontend.php:37
+msgid "Questionnaire Unavailable"
+msgstr ""
+
+#: includes/class-questionnaire-frontend.php:38
+msgid "The questionnaire is not available at this time."
+msgstr ""
+
+#: includes/class-questionnaire-frontend.php:42
+msgid "at"
+msgstr ""
+
+#: includes/class-questionnaire-frontend.php:45
+msgid "Pre-Session Questionnaire"
+msgstr ""
+
+#: includes/class-questionnaire-frontend.php:47
+#, php-format
+msgid "Hi %s! Please fill out this short questionnaire to help us prepare for your %s session on %s%s."
+msgstr ""

@@ -1,0 +1,5 @@
+# Left out of the installable ZIP (git archive)
+/.github       export-ignore
+/.gitignore    export-ignore
+/.gitattributes export-ignore
+/docs          export-ignore

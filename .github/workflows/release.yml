@@ -1,0 +1,56 @@
+name: Release
+
+# Pushing a version tag builds the installable ZIP and publishes it as a
+# GitHub release:  v1.10.0  ->  wp-photo-booking-1.10.0.zip
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+env:
+  PLUGIN: wp-photo-booking
+  TITLE: WP Photo Booking
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the tag against the plugin version
+        id: meta
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          header=$(grep -m1 'Version:' "$PLUGIN.php" | sed -E 's/.*Version:[[:space:]]*//' | tr -d '[:space:]')
+          if [ "$header" != "$version" ]; then
+            echo "Tag says $version but $PLUGIN.php says $header" >&2
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "zip=$PLUGIN-$version.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Build the ZIP
+        run: |
+          # WordPress needs the plugin folder at the top of the archive.
+          # Files marked export-ignore in .gitattributes are left out.
+          git archive --format=zip --prefix="$PLUGIN/" -o "${{ steps.meta.outputs.zip }}" "$GITHUB_REF_NAME"
+          unzip -Z1 "${{ steps.meta.outputs.zip }}" | head -8
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          notes="Install: in WordPress go to Plugins → Add New → Upload Plugin and choose \`${{ steps.meta.outputs.zip }}\`."
+          # A re-pushed tag replaces the ZIP of its existing release.
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" "${{ steps.meta.outputs.zip }}" --clobber
+            gh release edit "$GITHUB_REF_NAME" --draft=false --notes "$notes"
+          else
+            gh release create "$GITHUB_REF_NAME" "${{ steps.meta.outputs.zip }}" \
+              --title "$TITLE ${{ steps.meta.outputs.version }}" \
+              --notes "$notes"
+          fi
