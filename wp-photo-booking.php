@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP Photo Booking
  * Description: Configurable booking and contact forms for photographers, with calendar, status management, and email notifications.
- * Version:     1.10.0
+ * Version:     1.10.1
  * Author:      Ulla Wolk
  * License:     GPL-2.0+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,7 @@
 
 if (!defined('ABSPATH')) die('Forbidden');
 
-define('WPPB_VERSION',  '1.10.0');
+define('WPPB_VERSION',  '1.10.1');
 define('WPPB_DIR',      plugin_dir_path(__FILE__));
 define('WPPB_URL',      plugin_dir_url(__FILE__));
 

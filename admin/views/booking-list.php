@@ -21,6 +21,7 @@ $notices = array(
 ?>
 <div class="wrap wppb-wrap">
     <h1 class="wp-heading-inline"><?php echo $is_contact ? 'Messages' : 'Photo Bookings'; ?></h1>
+    <hr class="wp-header-end">
 
     <?php $notice = (isset($_GET['notice']) && is_string($_GET['notice'])) ? sanitize_key($_GET['notice']) : '';
     if (isset($notices[$notice])) : ?>

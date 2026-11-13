@@ -6,6 +6,26 @@ Requires WordPress 5.8+ and PHP 7.4+. Tested on WordPress 7.1 with PHP 8.3; olde
 
 Its companion plugin is [WP Photo Proofing](https://github.com/pckladivo/wp-photo-proofing) (password-protected galleries in which clients pick their photos). The two are independent — each can be installed on its own.
 
+## Screenshots
+
+The form as visitors see it. Fonts and field styling come from the active theme (here: Twenty Twenty-Five).
+
+![Booking form on a page](docs/screenshots/form.png)
+
+The form builder: every field, its label, meaning, width and whether it is required.
+
+![Form builder in the WordPress admin](docs/screenshots/builder.png)
+
+Bookings wait as *pending* until you confirm or cancel them.
+
+![List of bookings with statuses](docs/screenshots/list.png)
+
+Contact form submissions arrive in the Messages inbox.
+
+![Messages inbox](docs/screenshots/messages.png)
+
+The names and addresses in the screenshots are invented.
+
 ## What it does
 
 A plugin for forms that you build yourself in the admin area. Every form is one of three types:
@@ -54,13 +74,13 @@ Uninstalling (Delete in WordPress) removes the plugin's data through `uninstall.
 
 ## Releases
 
-Installable ZIP files are attached to the [GitHub releases](../../releases). They are built automatically from git tags named after the version, for example `v1.10.0`.
+Installable ZIP files are attached to the [GitHub releases](../../releases). They are built automatically from git tags named after the version, for example `v1.10.1`.
 
 To publish a new version: change the version in `wp-photo-booking.php` (the `Version:` header and the version constant), commit, then tag and push:
 
 ```bash
-git tag v1.10.0
-git push origin v1.10.0
+git tag v1.10.1
+git push origin v1.10.1
 ```
 
 The release workflow ([.github/workflows/release.yml](.github/workflows/release.yml)) refuses a tag that does not match the version in the plugin header.

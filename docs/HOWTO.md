@@ -1,4 +1,4 @@
-# WP Photo Booking 1.10.0 — how to use and test it
+# WP Photo Booking 1.10.1 — how to use and test it
 
 The plugin lets you build three kinds of forms and put them on any page:
 
@@ -23,7 +23,7 @@ Everything lives under **Photo Bookings** in the WordPress admin menu:
 ## 1. Install or upgrade
 
 1. Back up the database if the site already has bookings.
-2. Plugins → Add New → Upload Plugin → choose `wp-photo-booking-1.10.0.zip` → Install.
+2. Plugins → Add New → Upload Plugin → choose `wp-photo-booking-1.10.1.zip` → Install.
 3. If an older version is installed, WordPress shows a comparison screen. Click **Replace current with uploaded**.
 4. Activate the plugin if it is not active.
 
@@ -32,7 +32,7 @@ After an upgrade, check two things:
 - **All Bookings** still shows your existing bookings.
 - **Forms** still lists your forms. Nothing is created automatically: a new site starts with no forms, and every form can be deleted.
 
-The `[photo_booking]` shortcode no longer exists (since 1.10.0). Every form, booking forms included, is placed with its own `[wppb_form id="…"]` shortcode.
+The `[photo_booking]` shortcode no longer exists (since 1.10.1). Every form, booking forms included, is placed with its own `[wppb_form id="…"]` shortcode.
 
 Emails are sent through WordPress. On a test site, install a mail logging plugin (for example WP Mail Logging) so you can read what would have been sent.
 
